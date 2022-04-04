@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Modal extends StatelessWidget {
-  const Modal({Key? key}) : super(key: key);
+class LaporanUntungRugi extends StatelessWidget {
+  const LaporanUntungRugi({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
