@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import '../pages/home_page.dart';
-import '../pages/item_page.dart';
+import 'pages/home_page.dart';
+import 'pages/laporan.dart';
+import 'pages/pembukuan.dart';
 
 void main() {
   runApp(MaterialApp(
     initialRoute: '/',
     routes: {
-      '/': (context) => HomePage(),
-      '/item': (context) => ItemPage(),
+      '/': (context) => const HomePage(),
+      '/pembukuan': (context) => const Pembukuan(),
+      '/laporan': (context) => const Laporan(),
     },
   ));
 }

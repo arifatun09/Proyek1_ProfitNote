@@ -1,24 +1,78 @@
 import 'package:flutter/material.dart';
-import '../models/item.dart';
-import '../widgets/containerhomewidget.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
-
-  final List<Item> items = [
-    Item(name: 'Laporan Untung Rugi', photo:'https://freepikpsd.com/file/2019/10/Profit-PNG-Transparent-Image.png'),
-    Item(name: 'Lihat Grafik Untung Rugi', photo:'https://freepikpsd.com/file/2019/10/Profit-PNG-Image.png'),
-  ];
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Laporan Untung Rugi"),
+        title: const Text('PROFIT NOTE'),
       ),
-
-      body: ContainerWidget(items: items),
+      body: Column(
+        children: [
+          Card(
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/pembukuan');
+              },
+              child: Container(
+                margin: const EdgeInsets.all(8),
+                child: Row(
+                  children: const [
+                    Expanded(
+                      child: Image(
+                        image: AssetImage('assets/images/pembukuan.jpg'),
+                        width: 100,
+                        height: 100,
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        'Pembukuan',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Card(
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/laporan');
+              },
+              child: Container(
+                margin: const EdgeInsets.all(8),
+                child: Row(
+                  children: const [
+                    Expanded(
+                      child: Image(
+                        image: AssetImage('assets/images/laporan.jpg'),
+                        width: 100,
+                        height: 100,
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        'Laporan Untung Rugi',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
-
