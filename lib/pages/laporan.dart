@@ -14,7 +14,7 @@ class Laporan extends StatelessWidget {
           Card(
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/modal');
+                Navigator.pushNamed(context, '/laporan_untung_rugi');
               },
               child: Container(
                 margin: const EdgeInsets.all(8),
